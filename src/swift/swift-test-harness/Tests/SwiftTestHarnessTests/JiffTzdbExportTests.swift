@@ -11,10 +11,10 @@ struct JiffTzdbExportTests {
         #expect(lower.canonicalName == "America/New_York")
         let data = lower.data
         #expect(data.size >= 4)
-        #expect(data.get(index: 0) == 0x54) // 'T'
-        #expect(data.get(index: 1) == 0x5A) // 'Z'
-        #expect(data.get(index: 2) == 0x69) // 'i'
-        #expect(data.get(index: 3) == 0x66) // 'f'
+        #expect(data[0] == 0x54) // 'T'
+        #expect(data[1] == 0x5A) // 'Z'
+        #expect(data[2] == 0x69) // 'i'
+        #expect(data[3] == 0x66) // 'f'
 
         #expect(get(name: "America/NewYork") == nil)
     }
